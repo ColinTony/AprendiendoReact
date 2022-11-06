@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>REACT-01</title>
+        <meta charst="UTF-8" />
+            <!-- Cargat React -->
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+
+        <!--
+            Con babel procesara el codigo moderno para ser soportado por cualquier navegador
+        -->
+        
+        <script type="text/babel">
+            const divRoot = document.querySelector('#root'); // Obtenemos el div del HTML
+            const nombre = "Colin";
+
+            const h1Tag = <h1> HOLA MUNDO {nombre} </h1>;
+
+            // agregamos un nombre
+            // le mandamos el h1 al root div
+            ReactDOM.render( h1Tag, divRoot);
+        </script>
+    </body>
+</html>
